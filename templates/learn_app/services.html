@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+<section id="services">
+  <div class="container">
+    <h1 class="text-center mt-5">Services</h1>
+  <div class="row">
+    {% for row in services_information %}
+      <div class="col-12 col-lg-4">
+        <div class="card-deck mt-5">
+          <div class="card">
+            <img src="/media/{{row.services_image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ row.services_title }}</h5>
+              <p class="card-text">{{ row.services_details }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="text-center mt-5">
+    <a href="{% url 'learn_app:reservation' %}"><button class="btn btn-primary">Reservation</button></a>
+  </div>
+</div>
+</section>
+
+
+{% endblock %}

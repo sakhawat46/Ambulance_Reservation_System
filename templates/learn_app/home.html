@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body_block %}
+
+
+<section id="homepage">
+    <div class="container">
+      <div class="row">
+        {% for row in home_feature %}
+        <div class="col-12 py-5">
+          <h1 class="text-center">Key features of our Ambulance service</h1>
+          <br>
+          <img src="/media/{{row.home_feature_image}}" alt="" style="max-width: 100%; height: auto;">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

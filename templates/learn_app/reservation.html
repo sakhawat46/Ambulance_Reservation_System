@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% block body_block %}
+
+
+<section id="homepage">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 pt-2">
+                <div style="padding: 60px;">
+                    <h2 class="text-center mb-5">SUBMIT YOUR INFORMATION FOR RESERVATION</h2>
+                    <form method="POST">
+                        <!-- {{ form|crispy }} -->
+                        {% csrf_token %}
+
+
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                {{ form.name|as_crispy_field }}
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                {{ form.phone|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                {{ form.date|as_crispy_field }}
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                {{ form.type_of_ambulance|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                {{ form.pickup_location|as_crispy_field }}
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                {{ form.destination|as_crispy_field }}
+                            </div>
+                        </div>
+
+
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-outline-primary btn-lg">Request For Reservation</button>
+                        </div>
+                    </form>
+                </div>
+                {% if registered == True %}
+                <div class="alert alert-success">
+                    Request Submit Successfully!
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

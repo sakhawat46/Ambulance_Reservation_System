@@ -1,0 +1,97 @@
+.navbar-brand img {
+    height: 65px;
+    width: 65px;
+    margin-left: 25px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 8px;
+    color: black;
+}
+
+.nav-link:hover {
+    color: rgb(242, 69, 69) !important;
+}
+
+
+.iframe{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.iframe > * {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.quick-link li a {
+    color: white;
+}
+
+.quick-link li a:hover {
+    color: rgb(153, 56, 56);
+}
+
+.resources li a{
+    color: white;
+}
+
+.resources li a:hover {
+    color: rgb(153, 56, 56);
+}
+
+.fa{
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+  /* margin: 1px; */
+  padding: 5px;
+}
+
+.fa:hover{
+    background-color: rgb(233, 81, 81);
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    margin: 5px;
+    padding: 8px;
+  }
+
+.logo-footer img{
+    height: 65px;
+    width: 65px;
+}
+
+.footer-colour{
+    background-color: #46ad56;
+    font-size: 20px;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+/* .navbar{
+    background-color: red;
+} */
+
+/* .bg-info{
+    color: red !important;
+} */
+
+/* .navbar-custom{
+    background-color: red;
+} */
